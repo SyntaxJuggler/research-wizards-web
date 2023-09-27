@@ -1,0 +1,42 @@
+.Contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  font-size: 24px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.ContainError {
+  top: 30px;
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.Description {
+  font-size: 18px;
+  padding: 0 10px 0 10px;
+}
+
+.Contain > button {
+  margin-top: 50px;
+  border-radius: 15px;
+  padding: 15px 25px 15px 25px;
+  border: 0px;
+  background-color: #3c3939;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.Contain > button:hover {
+  background-color: #474646;
+}
+.ContainSuccess {
+  position: relative;
+  top: 140px;
+}
