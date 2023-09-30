@@ -5,12 +5,13 @@ const useResetPassword = () => {
     let IsSuccess;
     let ErrorMessage;
 
-    const requestData = { newPassword: NewPassword };
+    const requestData = {
+      newPassword: NewPassword,
+      resetToken: encodeURIComponent(resetToken),
+    };
     return axios
       .post(
-        `https://localhost:7178/api/UserPasswordManagment/reset?username=${UserName}&resetToken=${encodeURIComponent(
-          resetToken
-        )}`,
+        `https://researchwizards.syntaxjuggler.com/api/User/password/change-confirm?userName=${UserName}`,
         requestData
       )
       .then((response) => {

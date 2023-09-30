@@ -10,16 +10,17 @@ function App() {
     <React.Fragment>
       <Router>
         <Routes>
+          <Route path="/" />
           <Route
-            path="/EmailConfirm/:UserName/:ConfirmToken"
+            path="/email/confirm/:UserName/:ConfirmToken"
             element={<EmailConfirm />}
           />
           <Route
-            path="/ResetPassword/:UserName/:resetToken"
+            path="/password/change/:UserName/:resetToken"
             element={<PasswordReset />}
           />
           <Route
-            path="/EmailReset/:UserName/:Email/:resetToken"
+            path="/email/change/:UserName/:Email/:resetToken"
             element={<EmailReset />}
           />
         </Routes>

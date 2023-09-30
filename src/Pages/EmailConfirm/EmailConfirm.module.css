@@ -36,7 +36,16 @@
 .Contain > button:hover {
   background-color: #474646;
 }
+
 .ContainSuccess {
   position: relative;
   top: 140px;
+}
+
+.Loading {
+  font-size: 24px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

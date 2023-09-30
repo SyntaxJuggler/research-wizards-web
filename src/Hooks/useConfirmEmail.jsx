@@ -5,11 +5,14 @@ const useConfirmEmail = () => {
     let IsSuccess;
     let ErrorMessage;
 
+    const requestData = {
+      token: encodeURIComponent(ConfirmToken),
+    };
+
     return axios
       .get(
-        `https://localhost:7178/api/EmailManagment/Confirm?userName=${UserName}&token=${encodeURIComponent(
-          ConfirmToken
-        )}`
+        `https://researchwizards.syntaxjuggler.com/api/User/email/confirm?userName=${UserName}`,
+        requestData
       )
       .then((response) => {
         IsSuccess = response.data.isSuccess;

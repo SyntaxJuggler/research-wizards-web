@@ -129,7 +129,7 @@ const PasswordReset = () => {
                 </p>
                 <p className={styles.Description}>{ErrorText}</p>
                 <button className={styles.Leave} onClick={handleCloseClick}>
-                  Вернуться на сайт
+                  Покинуть сайт
                 </button>
               </div>
             ) : null}

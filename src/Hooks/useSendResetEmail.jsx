@@ -4,12 +4,14 @@ const useSendResetEmail = () => {
   const SendRequest = (UserName, Email, resetToken) => {
     let IsSuccess;
     let ErrorMessage;
-    const requestData = { newEmail: Email };
+
+    const requestData = {
+      newEmail: Email,
+      resetToken: encodeURIComponent(resetToken),
+    };
     return axios
       .post(
-        `https://localhost:7178/api/EmailManagment/ConfirmReset?userName=${UserName}&resetToken=${encodeURIComponent(
-          resetToken
-        )}`,
+        `https://researchwizards.syntaxjuggler.com/api/User/email/change-confirm?userName=${UserName}`,
         requestData
       )
       .then((response) => {

@@ -35,8 +35,10 @@ const EmailConfirm = () => {
       <Logo />
       <Modal>
         {isLoading ? (
-          <p>Loading...</p>
-        ) : !IsSuccess ? (
+          <section className={styles.Loading}>
+            <p>Loading...</p>
+          </section>
+        ) : IsSuccess ? (
           <section className={styles.ContainSuccess}>
             <Success />
           </section>
@@ -54,7 +56,7 @@ const EmailConfirm = () => {
                   : "Ошибка подтверждения почты"}
               </p>
               <p className={styles.Description}>{errorMessage}</p>
-              <button onClick={handleCloseClick}>Вернуться на сайт</button>
+              <button onClick={handleCloseClick}>Покинуть сайт</button>
             </>
           )}
         </section>

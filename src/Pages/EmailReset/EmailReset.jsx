@@ -61,7 +61,7 @@ const EmailReset = () => {
               {!IsSuccess && (
                 <p className={styles.Description}>{errorMessage}</p>
               )}
-              <button onClick={handleCloseClick}>Вернуться на сайт</button>
+              <button onClick={handleCloseClick}>Покинуть сайт</button>
             </>
           )}
         </section>
