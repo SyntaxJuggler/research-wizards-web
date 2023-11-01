@@ -52,11 +52,11 @@ const EmailConfirm = () => {
             <>
               <p>
                 {IsSuccess
-                  ? "Почта успешно подтверждена"
-                  : "Ошибка подтверждения почты"}
+                  ? "Email successfully confirmed"
+                  : "Email confirmation error"}
               </p>
               <p className={styles.Description}>{errorMessage}</p>
-              <button onClick={handleCloseClick}>Покинуть сайт</button>
+              <button onClick={handleCloseClick}>Leave site</button>
             </>
           )}
         </section>

@@ -11,7 +11,7 @@ const useResetPassword = () => {
     };
     return axios
       .post(
-        `https://researchwizards.syntaxjuggler.com/api/User/password/change-confirm?userName=${UserName}`,
+        `https://researchwizards.syntaxjuggler.com/api/User/managment/password/change-confirm?userName=${UserName}`,
         requestData
       )
       .then((response) => {

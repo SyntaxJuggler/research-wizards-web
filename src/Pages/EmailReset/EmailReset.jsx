@@ -3,7 +3,7 @@ import styles from "./EmailReset.module.css";
 
 import Logo from "../../Components/Logo/Logo";
 import Modal from "../../Components/Modal/Modal";
-import Success from "../../Components/Success/Success"; // Обратите внимание на исправленное имя компонента Success
+import Success from "../../Components/Success/Success";
 import Error from "../../Components/Error/Error";
 import { useParams } from "react-router-dom";
 import useSendResetEmail from "../../Hooks/useSendResetEmail";
@@ -51,17 +51,19 @@ const EmailReset = () => {
           {!isLoading && (
             <>
               <p>
-                {IsSuccess ? "Почта успешно сменена" : "Ошибка смены почты"}
+                {IsSuccess
+                  ? "Email successfully changed"
+                  : "Error changing email"}
               </p>
               {IsSuccess && (
                 <p className={styles.Description}>
-                  Сообщение о подтверждении почты выслано на новую почту
+                  A confirmation message has been sent to the new email
                 </p>
               )}
               {!IsSuccess && (
                 <p className={styles.Description}>{errorMessage}</p>
               )}
-              <button onClick={handleCloseClick}>Покинуть сайт</button>
+              <button onClick={handleCloseClick}>Leave site</button>
             </>
           )}
         </section>

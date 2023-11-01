@@ -10,8 +10,8 @@ const useConfirmEmail = () => {
     };
 
     return axios
-      .get(
-        `https://researchwizards.syntaxjuggler.com/api/User/email/confirm?userName=${UserName}`,
+      .post(
+        `https://researchwizards.syntaxjuggler.com/api/User/managment/email/confirm?userName=${UserName}`,
         requestData
       )
       .then((response) => {

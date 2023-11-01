@@ -1,7 +1,7 @@
 const useCheckValidatePassword = () => {
   const validatePassword = (password) => {
-    let IsValid = true;
-    let ErrorTextResult;
+    let isValid = true;
+    let errorTextResult;
 
     const containsBothCases = /[a-z]/.test(password) && /[A-Z]/.test(password);
     const containsDigit = /\d/.test(password);
@@ -12,31 +12,30 @@ const useCheckValidatePassword = () => {
       if (password.length > 6) {
         if (containsBothCases) {
           if (containsDigit) {
-            if (containsOnlySpecialChars) {
-            } else {
-              IsValid = false;
-              ErrorTextResult =
-                "Пароль не содержит спец-символы -._@+* либо содержит другие спец-символы";
+            if (!containsOnlySpecialChars) {
+              isValid = false;
+              errorTextResult =
+                "Password does not contain special characters -._@+* or contains other special characters";
             }
           } else {
-            IsValid = false;
-            ErrorTextResult = "Пароль не содержит 1 цифру";
+            isValid = false;
+            errorTextResult = "Password does not contain a digit";
           }
         } else {
-          IsValid = false;
-          ErrorTextResult =
-            "Пароль не содержит английский символ верхнего и нижнего регистра";
+          isValid = false;
+          errorTextResult =
+            "Password does not contain both uppercase and lowercase English letters";
         }
       } else {
-        IsValid = false;
-        ErrorTextResult = "Пароль должен быть больше 6 символов";
+        isValid = false;
+        errorTextResult = "Password must be more than 6 characters";
       }
     } else {
-      IsValid = false;
-      ErrorTextResult = "Пароль пустой";
+      isValid = false;
+      errorTextResult = "Password is empty";
     }
 
-    return { ErrorTextResult, IsValid };
+    return { errorTextResult, isValid };
   };
 
   return { validatePassword };

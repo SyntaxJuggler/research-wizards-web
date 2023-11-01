@@ -11,7 +11,7 @@ const useSendResetEmail = () => {
     };
     return axios
       .post(
-        `https://researchwizards.syntaxjuggler.com/api/User/email/change-confirm?userName=${UserName}`,
+        `https://researchwizards.syntaxjuggler.com/api/User/managment/email/change-confirm?userName=${UserName}`,
         requestData
       )
       .then((response) => {
