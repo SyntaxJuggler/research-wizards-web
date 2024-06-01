@@ -112,7 +112,7 @@ const PasswordReset = () => {
               </section>
             )}
             {IsSendRequest ? (
-              <div className={styles.Contain}>
+              <React.Fragment>
                 {IsSuccessRequest ? (
                   <section className={styles.ContainSuccess}>
                     <Success />
@@ -122,16 +122,18 @@ const PasswordReset = () => {
                     <Error />
                   </section>
                 )}
-                <p className={styles.HeaderText}>
-                  {IsSuccessRequest
-                    ? "Password Successfully Changed"
-                    : "Error Changing Password"}
-                </p>
-                <p className={styles.Description}>{ErrorText}</p>
-                <button className={styles.Leave} onClick={handleCloseClick}>
-                  Leave Site
-                </button>
-              </div>
+                <div className={styles.Contain}>
+                  <p className={styles.HeaderText}>
+                    {IsSuccessRequest
+                      ? "Password Successfully Changed"
+                      : "Error Changing Password"}
+                  </p>
+                  <p className={styles.Description}>{ErrorText}</p>
+                  <button className={styles.Leave} onClick={handleCloseClick}>
+                    Leave Site
+                  </button>
+                </div>
+              </React.Fragment>
             ) : null}
           </React.Fragment>
         )}

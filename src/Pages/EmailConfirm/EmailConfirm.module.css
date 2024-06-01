@@ -10,7 +10,7 @@
 }
 
 .ContainError {
-  top: 30px;
+  top: 20px;
   margin-top: 20px;
   position: relative;
   display: flex;
@@ -38,8 +38,9 @@
 }
 
 .ContainSuccess {
+  top: 20px;
+  margin-top: 20px;
   position: relative;
-  top: 140px;
 }
 
 .Loading {
@@ -48,4 +49,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 15px;
 }
